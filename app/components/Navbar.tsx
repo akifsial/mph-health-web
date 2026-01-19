@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import logo from "@/app/assets/svgs/web-logo.svg";
 import rightArrow from "@/app/assets/svgs/arrow-right.svg";
