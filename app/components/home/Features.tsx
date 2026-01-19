@@ -9,39 +9,6 @@ import Image from "next/image";
 function Features() {
   return (
     <div className="h-[95px] bg-[#EEEEEE] ps-[32px] pe-[32px] flex items-center justify-center font-nudgetrial font-bold ">
-      {/* <Swiper
-        slidesPerView="3"
-        spaceBetween={20}
-        className="w-full flex justify-center "
-        freeMode={true}
-        // modules={[FreeMode]}
-        modules={[Autoplay]}
-        loop={true}
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
-        }}
-      >
-        <SwiperSlide className="w-[250px]">
-          <div className="flex justify-between gap-5">
-            <p className="text-[22px]">Evidence-Based Coaching</p>
-            <Image src={dummbellsIcon} />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="w-[250px]">
-          <div className="flex justify-center">
-            <p className="text-[22px]">Physique Transformation Experts</p>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="w-[250px]">
-          <div className="flex justify-center">
-            <p className="text-[22px]">Evidence-Based Coaching</p>
-            
-          </div>
-        </SwiperSlide>
-      </Swiper> */}
 
       <Swiper
 
