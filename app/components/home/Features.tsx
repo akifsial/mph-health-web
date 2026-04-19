@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import dummbellsIcon from "@/app/assets/svgs/dumbbells.svg";
@@ -9,32 +9,27 @@ import Image from "next/image";
 function Features() {
   return (
     <div className="h-[95px] bg-[#EEEEEE] ps-[32px] pe-[32px] flex items-center justify-center font-nudgetrial font-bold ">
-
       <Swiper
-
-        slidesPerView="2"
+        slidesPerView={2}
         spaceBetween={40}
-        loop={true}
-        autoplay={{
-          delay: 0,
-          disableOnInteraction: false,
-        }}
         speed={5000}
-        modules={[Autoplay]}
-        className="w-full"
-         breakpoints={{
-    0: {
-      slidesPerView: 1,
-    },
-    640: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    }}}
+        freeMode={true}
+        modules={[Autoplay,FreeMode]}
+        className="w-full flex gap-5"
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
       >
-        <SwiperSlide className="w-auto">
-          <div className="flex items-center gap-6">
+        <SwiperSlide className="!w-auto ps-5 pe-5">
+          <div className="flex justify-center items-center gap-6 ms-3 me-3">
             <p className="text-[22px] whitespace-nowrap">
               Evidence-Based Coaching
             </p>
@@ -47,8 +42,8 @@ function Features() {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className="w-auto">
-          <div className="flex items-center gap-6">
+        <SwiperSlide className="!w-auto">
+          <div className="flex justify-center items-center gap-6 ms-3 me-3">
             <p className="text-[22px] whitespace-nowrap">
               Physique Transformation Experts
             </p>
@@ -61,8 +56,8 @@ function Features() {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide className="w-auto">
-          <div className="flex items-center gap-6">
+        <SwiperSlide className="!w-auto">
+          <div className="flex justify-center items-center gap-6 ms-3 me-3">
             <p className="text-[22px] whitespace-nowrap">
               Physique Transformation Experts
             </p>

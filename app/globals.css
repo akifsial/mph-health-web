@@ -50,6 +50,12 @@
   border-radius: 50%;
 }
 
+@media (max-width: 1325px) {
+  .trainers-container {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 1224px) and (min-width: 1024px) {
   .top-heading {
     font-size: 180px;
