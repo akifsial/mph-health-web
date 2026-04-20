@@ -1,8 +1,10 @@
+"use client"
 import PrimaryButton from "../PrimaryButton";
 import rightArrow from "@/app/assets/svgs/arrow-right.svg";
 import SliderTransformation from "./SliderTransformation";
 import transformation1 from "@/app/assets/images/transformation-1.png";
 import transformation2 from "@/app/assets/images/transformation-2.png";
+import { useRef, useState } from "react";
 
 const sliderData = [
   {
@@ -32,6 +34,45 @@ const sliderData = [
 ];
 
 function Transformation() {
+  const sliderRef = useRef<HTMLDivElement | null>(null);
+
+  const [isDown, setIsDown] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    const el = sliderRef.current;
+    if (!el) return;
+
+    setIsDown(true);
+    el.classList.add("cursor-grabbing");
+
+    setStartX(e.pageX - el.offsetLeft);
+    setScrollLeft(el.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    const el = sliderRef.current;
+    if (!el) return;
+
+    setIsDown(false);
+    el.classList.remove("cursor-grabbing");
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const el = sliderRef.current;
+    if (!isDown || !el) return;
+
+    e.preventDefault();
+    const x = e.pageX - el.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    el.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseLeave = () => {
+    setIsDown(false);
+  };
+
   return (
     <div className="px-[100px] py-[70px]">
       <div className=" flex justify-between w-full lg:mb-0 mb-10 w-full">
@@ -46,7 +87,14 @@ function Transformation() {
           />
         </div>
       </div>
-      <div className="flex gap-6 overflow-x-auto w-full flex-nowrap">
+      <div
+        ref={sliderRef}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        className="flex gap-6 overflow-x-auto w-full flex-nowrap custom-scroll"
+      >
         {sliderData.map((item) => (
           <SliderTransformation key={item.id} data={item} />
         ))}

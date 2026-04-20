@@ -81,3 +81,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* Styling for a specific container */
+.custom-scroll {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #E8FE61 #f1f1f1;
+}
+

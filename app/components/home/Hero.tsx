@@ -32,13 +32,13 @@ function Hero() {
               5,000+ Successful Transformations
             </p>
             <div className="flex">
-              <Image className=" h-[55px] w-[55px]" src={userPlaceholder1} />
+              <Image className=" h-[55px] w-[55px]" src={userPlaceholder1} alt="client" />
               <Image
-                className="h-[55px] w-[55px] ms-[-20px]"
+                className="h-[55px] w-[55px] ms-[-20px]" alt="client"
                 src={userPlaceholder1}
               />
               <Image
-                className="h-[55px] w-[55px] ms-[-20px]"
+                className="h-[55px] w-[55px] ms-[-20px]" alt="client"
                 src={userPlaceholder1}
               />
             </div>
@@ -53,7 +53,7 @@ function Hero() {
       </div>
       <Image
         className="absolute md:top-[-25px] top-[0px] md:w-[439px] md:h-[744px] w-[320px] h-[570px] object-fit-cover"
-        src={fitGirl}
+        src={fitGirl} alt="client"
       />
     </div>
   );

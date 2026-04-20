@@ -1,15 +1,14 @@
+import { SliderProps } from "@/app/types/ui";
 import Image from "next/image";
-import React from "react";
 
-function SliderTransformation({ data }) {
+function SliderTransformation({ data }:SliderProps) {
   return (
     <div className="mt-10 w-fit flex-shrink-0">
       <div className="relative flex rounded-[16px] overflow-hidden">
-
         {/* BEFORE */}
         <div className="relative">
           <Image
-            className="object-cover"
+            className="object-cover pointer-events-none"
             src={data.beforeImage}
             alt="before"
           />
@@ -21,7 +20,7 @@ function SliderTransformation({ data }) {
         {/* AFTER */}
         <div className="relative">
           <Image
-            className="object-cover"
+            className="object-cover pointer-events-none"
             src={data.afterImage}
             alt="after"
           />
@@ -36,7 +35,6 @@ function SliderTransformation({ data }) {
             {data.label}
           </div>
         </div>
-
       </div>
     </div>
   );
