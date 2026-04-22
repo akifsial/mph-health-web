@@ -12,7 +12,7 @@ function SliderTransformation({ data }:SliderProps) {
             src={data.beforeImage}
             alt="before"
           />
-          <div className="absolute bottom-0 mb-[10px] ms-[10px] py-[10px] pb-[6px] px-[13px] text-black rounded-[8px] font-nudgetrial font-bold text-[16px] bg-white">
+          <div className="absolute bottom-0 mb-[10px] ms-[10px] py-[10px] pb-[6px] px-[13px] text-black rounded-[8px] font-nudgetrial font-bold sm:text-[16px] text-[12px] bg-white">
             BEFORE
           </div>
         </div>
@@ -24,7 +24,7 @@ function SliderTransformation({ data }:SliderProps) {
             src={data.afterImage}
             alt="after"
           />
-          <div className="absolute bottom-0 mb-[10px] ms-[10px] py-[10px] pb-[6px] px-[13px] text-black rounded-[8px] font-nudgetrial font-bold text-[16px] bg-white">
+          <div className="absolute bottom-0 mb-[10px] ms-[10px] py-[10px] pb-[6px] px-[13px] text-black rounded-[8px] font-nudgetrial font-bold sm:text-[16px] text-[12px] bg-white">
             AFTER
           </div>
         </div>

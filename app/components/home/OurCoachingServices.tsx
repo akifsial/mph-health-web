@@ -5,7 +5,7 @@ import ServicesAccordion from "../ServicesAccordion";
 
 function OurCoachingServices() {
   return (
-    <div className=" bg-[#EFF5FF] pb-[70px] ps-[20px] pe-[20px] flex justify-center lg:flex-row flex-col items- gap-[40px] pt-[70px]  ">
+    <div className=" bg-[#EFF5FF] pb-[70px] ps-[20px] items-center pe-[20px] flex justify-center lg:flex-row flex-col items- gap-[40px] pt-[70px]  ">
       <div className="md:w-[550px] lg:mb-0 mb-10 w-full">
         <h2 className=" text-center leading-17 font-nudgetrial font-bold sm:text-[50px] text-[40px] md:text-[64px] lg:text-start text-center">
           Our Coaching Services

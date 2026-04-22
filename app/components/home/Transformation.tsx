@@ -74,12 +74,12 @@ function Transformation() {
   };
 
   return (
-    <div className="px-[100px] py-[70px]">
-      <div className=" flex justify-between w-full lg:mb-0 mb-10 w-full">
-        <h2 className="w-[600px] text-center leading-17 font-nudgetrial font-bold sm:text-[50px] text-[40px] md:text-[64px] lg:text-start text-center">
+    <div className="lg:px-[100px] px-[20px] py-[70px]">
+      <div className=" flex lg:flex-row flex-col md:justify-between justify-center items-center lg:gap-0 gap-[30px] w-full lg:mb-0 lg:mb-10 mb-0 w-full">
+        <h2 className="md:w-[600px] text-center lg:leading-17 sm:leading-16 leading-10 font-nudgetrial font-bold sm:text-[50px] text-[40px] md:text-[64px] lg:text-start text-center">
           Real Transformations, Lasting Results
         </h2>
-        <div>
+        <div className="flex md:justify-start justify-center">
           <PrimaryButton
             className={" cursor-pointer h-fit"}
             title={"See More Transformations"}
