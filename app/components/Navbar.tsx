@@ -15,6 +15,7 @@ function Navbar() {
       <Image
         className="md:w-[214px] md:h-[65px] w-[150px] h-[60px]"
         src={logo}
+        alt="logo"
 
       />
 
@@ -30,6 +31,7 @@ function Navbar() {
           className="w-10 h-10 cursor-pointer lg:hidden block "
           src={hamburger}
           onClick={()=>(setSidebarOpen(true))}
+          alt="hamburger-icon"
         />
 
         <PrimaryButton
